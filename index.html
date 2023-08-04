@@ -106,7 +106,7 @@
 <section>
   <!-- Navigation Bar -->
   <nav class="fixed top-0 left-0 right-0 z-10 h-auto w-full shadow-xl">
-    <div class="p-2 bg-gray-50 opacity-95">
+    <div class="p-2 bg-gray-50 opacity-95 border-b-2 border-gray-500 border-opacity-10">
       <div class="p-2 flex items-center justify-between">
         <!-- Logo -->
         <div class="w-6 h-6 mb-5 text-center">
@@ -118,8 +118,8 @@
         <h1 class="text-gray-950 text-xl font-bold">SHOWN RIGHT</h1>
         <!-- Hamburger Icon -->
         <div class="justify-end">
-          <a href="#" class="hamburger-icon"><i class="fa-solid fa-bars text-3xl justify-center text-gray-950"></i></a>
-          <a href="#" class="close-icon hidden"><i class="fa-solid fa-xmark text-3xl justify-center text-gray-950"></i></a>
+          <a class="hamburger-icon"><i class="fa-solid fa-bars text-3xl justify-center text-gray-950"></i></a>
+          <a class="close-icon hidden"><i class="fa-solid fa-xmark text-3xl justify-center text-gray-950"></i></a>
         </div>  
       </div>
     </div>
@@ -127,9 +127,9 @@
     <!-- Navigation Menu -->
     <div class="inline-block hidden h-full w-full bg-gray-50 p-2 flex-wrap opacity-95" id="menuItems">
       <ul class="text-center flex flex-col gap-5 mt-2">
-        <li class=""><a href="#" id="#artists" class="text-gray-950 text-xl">Artists</a></li>
-        <li class=""><a href="#" id="music" class="text-gray-950 text-xl">Music</a></li>
-        <li class=""><a href="#" id="#contacts" class="text-gray-950 text-xl">Contacts</a></li>
+        <li><a href="#artists" class="text-gray-950 text-xl">Artists</a></li>
+        <li><a href="#music" class="text-gray-950 text-xl">Music</a></li>
+        <li><a href="#contacts" class="text-gray-950 text-xl">Contacts</a></li>
       </ul>
     </div>
   </nav>
@@ -183,7 +183,7 @@
                     Lorem ipsum dolor sit amet,
                     consectetur adipisicing elit.
                   </p>
-                  <a id="button" href="https://linktr.ee/Bouzyb" class="">
+                  <a id="button" href="https://linktr.ee/Bouzyb" target="_blank">
                     <h1 class="mt-4 bg-red-500 hover:bg-red-700 focus:bg-red-700 active:bg-red-700 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-default text-gray-50 font-medium py-1 px-1 rounded-md shadow-md transition duration-300 ease-in-out text-xs sm:text-sm">
                       Stream Now <i class="fas fa-arrow-right p-2"></i>
                     </h1>
@@ -206,7 +206,7 @@
                     Lorem ipsum dolor sit amet,
                     consectetur adipisicing elit.
                   </p>
-                  <a id="button" href="#" class="">
+                  <a id="button" href="#" target="_blank">
                     <h1 class="mt-4 bg-red-500 hover:bg-red-700 focus:bg-red-700 active:bg-red-700 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-default text-gray-50 font-medium py-1 px-1 rounded-md shadow-md transition duration-300 ease-in-out text-xs sm:text-sm">
                       Stream Now <i class="fas fa-arrow-right p-2"></i>
                     </h1>
@@ -220,7 +220,7 @@
 </section>
 
 <!-- Music Section (Top & Middle half)-->
-<section class="animated-container overflow-hidden bg-gray-950" id="#music">
+<section class="animated-container overflow-hidden bg-gray-950" id="music">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           
               <!-- Top Grid Box -->
@@ -256,7 +256,7 @@
             <div class="relative">
               <img src="./img/sr-hurryup1.jpg" alt="bouz" class="object-cover rounded opacity-80 w-full h-64 sm:w-auto sm:h-auto max-w-xs sm:max-w-full">
               <div id="animationContainer" class="absolute inset-0 flex flex-col justify-center items-center bg-opacity-0 hover:bg-opacity-30 transition duration-1000 ease-in-out">
-                <a id="button" href="https://music.apple.com/ae/album/hurry-up-single/1692770573">
+                <a id="button" href="https://music.apple.com/ae/album/hurry-up-single/1692770573" target="_blank">
                   <h1 class="mt-2 bg-gray-50 hover:text-gray-50 hover:bg-gray-950 focus:bg-gray-950 active:bg-gray-950 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-default text-gray-950 font-medium py-1 px-4 rounded-2xl shadow-md transition duration-300 ease-in-out text-xs sm:text-sm">
                     Play Now <i class="fa-solid fa-circle-play p-1 hover:text-gray-50"></i>
                   </h1>
@@ -276,7 +276,7 @@
             <div class="relative">
               <img src="./img/sr-letsunfoldit1.jpg" alt="bouz" class="object-cover rounded opacity-80 w-full h-64 sm:w-auto sm:h-auto max-w-xs sm:max-w-full">
               <div id="animationContainer" class="absolute inset-0 flex flex-col justify-center items-center bg-opacity-0 hover:bg-opacity-30 transition duration-1000 ease-in-out">
-                <a id="button" href="https://music.apple.com/ae/album/lets-unfold-it-single/1639003148">
+                <a id="button" href="https://music.apple.com/ae/album/lets-unfold-it-single/1639003148" target="_blank">
                   <h1 class="mt-2 bg-gray-50 hover:text-gray-50 hover:bg-gray-950 focus:bg-gray-950 active:bg-gray-950 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-default text-gray-950 font-medium py-1 px-4 rounded-2xl shadow-md transition duration-300 ease-in-out text-xs sm:text-sm">
                     Play Now <i class="fa-solid fa-circle-play p-1 hover:text-gray-50"></i>
                   </h1>
@@ -296,7 +296,7 @@
             <div class="relative">
               <img src="./img/sr-rollingup1.jpg" alt="bouz" class="object-cover rounded opacity-80 w-full h-64 sm:w-auto sm:h-auto max-w-xs sm:max-w-full">
               <div id="animationContainer" class="absolute inset-0 flex flex-col justify-center items-center bg-opacity-0 hover:bg-opacity-30 transition duration-1000 ease-in-out">
-                <a id="button" href="https://music.apple.com/ae/album/rollin-up/1681491860?i=1681491863">
+                <a id="button" href="https://music.apple.com/ae/album/rollin-up/1681491860?i=1681491863" target="_blank">
                   <h1 class="mt-2 bg-gray-50 hover:text-gray-50 hover:bg-gray-950 focus:bg-gray-950 active:bg-gray-950 disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-default text-gray-950 font-medium py-1 px-4 rounded-2xl shadow-md transition duration-300 ease-in-out text-xs sm:text-sm">
                     Play Now <i class="fa-solid fa-circle-play p-1 hover:text-gray-50"></i>
                   </h1>
@@ -315,7 +315,7 @@
 </div>      
 
 <!-- Contacts Section -->
-<section class="flex justify-center items-start h-screen" id="#contacts">
+<section class="flex justify-center items-start h-screen" id="contacts">
   <!-- Video Container -->
   <div class="hero">
     <div class="video-container">
@@ -344,7 +344,7 @@
           <div class="flex items-center bg-gray-50 rounded-full mt-2">
             <div class="m-3 flex items-center">
               <i class="fa-brands fa-instagram text-xl text-gray-950"></i>
-              <a href="https://www.instagram.com/shownright_/"><p class="ml-2 whitespace-normal text-sm text-gray-950">shownright_</p></a>
+              <a href="https://www.instagram.com/shownright_/" target="_blank"><p class="ml-2 whitespace-normal text-sm text-gray-950">shownright_</p></a>
             </div>
           </div>
         </div>
