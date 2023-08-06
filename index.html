@@ -98,6 +98,12 @@
     align-items: center;
     }
 
+    #menuItems {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    }
+
   </style>
 </head>
 
@@ -164,7 +170,7 @@
           <div class="m-3">
             <p class="m-3 text-lg text-gray-500 text-center">
               <span class="bg-red-500 text-gray-50">Creative Consultancy</span> managing music, arts, 
-              and entertainment projects with <span class="bg-red-500 text-gray-50">innovation</span> and expertise. 
+              and entertainment projects innovatively with <span class="bg-red-500 text-gray-50">expertise.</span
             </p>
           </div>
         </div>
@@ -353,8 +359,45 @@
   </div>
 </section>
 
-  <!-- Javascript -->
-  <script>
+<!-- Footer -->
+<footer>
+  <div class="top-0 left-0 right-0 z-10 h-auto w-full shadow-xl">
+    <div class="p-2 bg-gray-950 opacity-95">
+      <div class="p-2 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="w-6 h-6 mb-5 text-center">
+          <a href="#" class="w-2 h-2">
+            <img src="./img/sr-logo2wte.png" alt="Shown Right Logo">
+          </a>
+        </div>
+
+        <!-- Footer navigation bar -->
+        <nav>
+          <ul>
+            <li><a href="#artists" class="text-gray-50 text-sm">Artists</a></li>
+            <li><a href="#music" class="text-gray-50 text-sm">Music</a></li>
+            <li><a href="#contacts" class="text-gray-50 text-sm">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <!-- Privacy Policy & Terms-->
+        <div>
+          <ul class="flex flex-row gap-5">
+            <li><a href="#" class="text-gray-50 text-sm">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-50 text-sm">T's & C's</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="p-2 flex flex-wrap justify-center text-xs text-gray-50">© 2023<a href="https://www.instagram.com/shownright_/" target="_blank"> Shown Right.</a> All Rights Reserved.</p>
+
+    </div>
+  </div>
+
+</footer>
+
+<!-- Javascript -->
+<script>
   const sliderContainer = document.querySelector('.slider-container');
   const sliderSections = Array.from(document.querySelectorAll('.slider-section'));
   let currentSlideIndex = 0;
@@ -371,36 +414,54 @@
   }
   extSlide(); // Start the sliding immediately
 
-  </script>
+</script>
+<!-- Hamburger icon script -->
+<script>
+        // Nav bar javascript
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.getElementById('menuItems');
+            const hamburgerIcon = document.querySelector('.hamburger-icon');
+            const closeIcon = document.querySelector('.close-icon');
 
-  <!-- Hamburger icon script -->
-  <script>
-    // Nav bar javascript
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuItems = document.getElementById('menuItems');
-        const hamburgerIcon = document.querySelector('.hamburger-icon');
-        const closeIcon = document.querySelector('.close-icon');
+            // Function to toggle the visibility of the navigation menu
+            function toggleMenu() {
+                menuItems.classList.toggle('hidden');
+            }
 
-        // Function to toggle the visibility of the navigation menu
-        function toggleMenu() {
-            menuItems.classList.toggle('hidden');
-        }
+            // Event listener for hamburger icon click
+            hamburgerIcon.addEventListener('click', function() {
+                // Toggle the menu visibility
+                toggleMenu();
 
-        // Event listener for hamburger icon click
-        hamburgerIcon.addEventListener('click', function() {
-            toggleMenu();
-            hamburgerIcon.classList.add('hidden');
-            closeIcon.classList.remove('hidden');
+                // Check if the menu is now visible
+                const isVisible = !menuItems.classList.contains('hidden');
+
+                // Apply animation to the menu based on its visibility
+                if (isVisible) {
+                    menuItems.style.maxHeight = menuItems.scrollHeight + 'px';
+                } else {
+                    menuItems.style.maxHeight = '0';
+                }
+
+                // Toggle the visibility of the hamburger and close icons
+                hamburgerIcon.classList.toggle('hidden', isVisible);
+                closeIcon.classList.toggle('hidden', !isVisible);
+            });
+
+            // Event listener for close icon click
+            closeIcon.addEventListener('click', function() {
+                // Toggle the menu visibility
+                toggleMenu();
+
+                // Reset the menu height to 0
+                menuItems.style.maxHeight = '0';
+
+                // Toggle the visibility of the hamburger and close icons
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
         });
-
-        // Event listener for close icon click
-        closeIcon.addEventListener('click', function() {
-            toggleMenu();
-            closeIcon.classList.add('hidden');
-            hamburgerIcon.classList.remove('hidden');
-        });
-    });
-  </script>
+</script>
 </body>
 
 </html>
